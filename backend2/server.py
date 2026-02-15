@@ -20,6 +20,13 @@ allowed_origins = [FRONTEND_URL]
 
 if FRONTEND_URL == "http://localhost:5173":
     allowed_origins.append("http://localhost:5174")
+else:
+    allowed_origins.extend([
+        "http://localhost:5173",
+        "http://localhost:5174"
+    ])
+    
+    
 
 app.add_middleware(
     CORSMiddleware,
