@@ -6,7 +6,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import Selector from "../components/Selector.jsx";
-import UserEditor from "../components/UserEditor.jsx";
+import MonacoEditor from "../components/MonacoEditor.jsx";
 import Output from "../components/Output.jsx";
 import EditorSidebar from "../components/EditorSidebar.jsx";
 import { API_URL } from "../config/api.js";
@@ -146,10 +146,10 @@ export default function Editor({ user, theme, toggleTheme }) {
 
   const value = tab === "html" ? htmlcode : tab === "css" ? csscode : jscode;
 
-  const onChange = (e) => {
-    if (tab === "html") sethtmlcode(e.target.value);
-    else if (tab === "css") setcsscode(e.target.value);
-    else setjscode(e.target.value);
+  const handleEditorChange = (newValue) => {
+    if (tab === "html") sethtmlcode(newValue || "");
+    else if (tab === "css") setcsscode(newValue || "");
+    else setjscode(newValue || "");
   };
 
   const downloadZip = () => {
@@ -201,7 +201,11 @@ export default function Editor({ user, theme, toggleTheme }) {
               <ResizablePanel>
                 <div className="user-magic">
                   <Selector tab={tab} settab={settab} />
-                  <UserEditor tab={tab} value={value} onChange={onChange} />
+                  <MonacoEditor
+                    tab={tab}
+                    value={value}
+                    onChange={handleEditorChange}
+                  />
                 </div>
               </ResizablePanel>
               <ResizableHandle withHandle />
