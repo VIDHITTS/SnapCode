@@ -13,6 +13,7 @@ export default function MonacoEditor({ tab, value, onChange }) {
     <div className="monaco-editor-wrapper">
       <Editor
         height="100%"
+        defaultLanguage="html"
         language={language}
         value={value}
         onChange={(val) => onChange(val)}
