@@ -9,6 +9,10 @@ const languageMap = {
 export default function MonacoEditor({ tab, value, onChange }) {
   const language = languageMap[tab] || "html";
 
+  const editorOptions = {
+    // Language-specific settings will be added here
+  };
+
   return (
     <div className="monaco-editor-wrapper">
       <Editor
@@ -17,6 +21,7 @@ export default function MonacoEditor({ tab, value, onChange }) {
         language={language}
         value={value}
         onChange={(val) => onChange(val)}
+        options={editorOptions}
       />
     </div>
   );
