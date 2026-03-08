@@ -10,7 +10,7 @@ export default function MonacoEditor({ tab, value, onChange }) {
   const language = languageMap[tab] || "html";
 
   const editorOptions = {
-    // Language-specific settings will be added here
+    autoClosingBrackets: "always",
   };
 
   return (
