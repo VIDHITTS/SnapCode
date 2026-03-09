@@ -11,6 +11,7 @@ export default function MonacoEditor({ tab, value, onChange }) {
 
   const editorOptions = {
     autoClosingBrackets: "always",
+    autoClosingQuotes: "always",
   };
 
   return (
