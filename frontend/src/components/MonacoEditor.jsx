@@ -21,6 +21,7 @@ export default function MonacoEditor({ tab, value, onChange }) {
         height="100%"
         defaultLanguage="html"
         language={language}
+        theme="vs-dark"
         value={value}
         onChange={(val) => onChange(val)}
         options={editorOptions}
