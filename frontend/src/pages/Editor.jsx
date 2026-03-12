@@ -205,6 +205,7 @@ export default function Editor({ user, theme, toggleTheme }) {
                     tab={tab}
                     value={value}
                     onChange={handleEditorChange}
+                    theme={theme}
                   />
                 </div>
               </ResizablePanel>

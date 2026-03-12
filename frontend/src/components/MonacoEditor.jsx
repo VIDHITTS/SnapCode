@@ -6,8 +6,9 @@ const languageMap = {
   js: "javascript",
 };
 
-export default function MonacoEditor({ tab, value, onChange }) {
+export default function MonacoEditor({ tab, value, onChange, theme }) {
   const language = languageMap[tab] || "html";
+  const monacoTheme = theme === "dark" ? "vs-dark" : "light";
 
   const editorOptions = {
     autoClosingBrackets: "always",
@@ -21,7 +22,7 @@ export default function MonacoEditor({ tab, value, onChange }) {
         height="100%"
         defaultLanguage="html"
         language={language}
-        theme="vs-dark"
+        theme={monacoTheme}
         value={value}
         onChange={(val) => onChange(val)}
         options={editorOptions}
