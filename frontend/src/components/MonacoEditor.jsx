@@ -14,6 +14,7 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     autoClosingBrackets: "always",
     autoClosingQuotes: "always",
     autoClosingTags: true,
+    minimap: { enabled: false },
   };
 
   return (
