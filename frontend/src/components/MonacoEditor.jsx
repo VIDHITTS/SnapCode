@@ -17,6 +17,7 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     minimap: { enabled: false },
     wordWrap: "on",
     lineNumbers: "on",
+    tabSize: 2,
   };
 
   return (
