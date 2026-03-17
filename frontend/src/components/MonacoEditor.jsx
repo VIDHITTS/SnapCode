@@ -18,6 +18,7 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     wordWrap: "on",
     lineNumbers: "on",
     tabSize: 2,
+    formatOnPaste: true,
   };
 
   return (
