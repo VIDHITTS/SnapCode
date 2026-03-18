@@ -19,6 +19,7 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     lineNumbers: "on",
     tabSize: 2,
     formatOnPaste: true,
+    bracketPairColorization: { enabled: true },
   };
 
   return (
