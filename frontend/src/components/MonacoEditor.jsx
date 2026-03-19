@@ -20,6 +20,9 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     tabSize: 2,
     formatOnPaste: true,
     bracketPairColorization: { enabled: true },
+    fontFamily: "'Fira Code', 'Cascadia Code', 'Consolas', monospace",
+    fontSize: 14,
+    fontLigatures: true,
   };
 
   return (
