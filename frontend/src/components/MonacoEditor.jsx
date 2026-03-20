@@ -23,6 +23,9 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     fontFamily: "'Fira Code', 'Cascadia Code', 'Consolas', monospace",
     fontSize: 14,
     fontLigatures: true,
+    cursorBlinking: "smooth",
+    cursorStyle: "line",
+    cursorSmoothCaretAnimation: "on",
   };
 
   return (
