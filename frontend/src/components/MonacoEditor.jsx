@@ -26,6 +26,7 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     cursorBlinking: "smooth",
     cursorStyle: "line",
     cursorSmoothCaretAnimation: "on",
+    scrollBeyondLastLine: false,
   };
 
   return (
