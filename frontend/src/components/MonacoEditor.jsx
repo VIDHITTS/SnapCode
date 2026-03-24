@@ -6,6 +6,34 @@ const languageMap = {
   js: "javascript",
 };
 
+function EditorLoading() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100%",
+        color: "var(--muted-foreground, #888)",
+        fontSize: "0.9rem",
+      }}
+    >
+      <div
+        style={{
+          width: "24px",
+          height: "24px",
+          border: "3px solid var(--muted, #333)",
+          borderTopColor: "var(--primary, #646cff)",
+          borderRadius: "50%",
+          animation: "spin 0.8s linear infinite",
+          marginRight: "8px",
+        }}
+      />
+      Loading editor...
+    </div>
+  );
+}
+
 export default function MonacoEditor({ tab, value, onChange, theme }) {
   const language = languageMap[tab] || "html";
   const monacoTheme = theme === "dark" ? "vs-dark" : "light";
@@ -40,6 +68,7 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
         value={value}
         onChange={(val) => onChange(val)}
         options={editorOptions}
+        loading={<EditorLoading />}
       />
     </div>
   );
