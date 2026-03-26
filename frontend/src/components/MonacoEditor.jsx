@@ -57,6 +57,11 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
     scrollBeyondLastLine: false,
     smoothScrolling: true,
     suggestOnTriggerCharacters: true,
+    quickSuggestions: {
+      other: true,
+      comments: true,
+      strings: true,
+    },
   };
 
   return (
