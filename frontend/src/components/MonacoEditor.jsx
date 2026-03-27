@@ -62,6 +62,8 @@ export default function MonacoEditor({ tab, value, onChange, theme }) {
       comments: true,
       strings: true,
     },
+    padding: { top: 16, bottom: 16 },
+    automaticLayout: true,
   };
 
   return (
