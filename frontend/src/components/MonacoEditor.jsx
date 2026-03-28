@@ -1,4 +1,5 @@
 import Editor from "@monaco-editor/react";
+import "../styles/MonacoEditor.css";
 
 const languageMap = {
   html: "html",

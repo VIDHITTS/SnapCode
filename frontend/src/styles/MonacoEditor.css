@@ -1,0 +1,36 @@
+/* MonacoEditor.css - Custom styles for the Monaco editor wrapper */
+
+.monaco-editor-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+
+.monaco-editor-wrapper .monaco-editor {
+  padding-top: 0;
+}
+
+.monaco-editor-wrapper .monaco-editor .scroll-decoration {
+  display: none;
+}
+
+/* Ensure the editor fills available space */
+.monaco-editor-wrapper .monaco-editor,
+.monaco-editor-wrapper .overflow-guard {
+  border-radius: 0 0 8px 8px;
+}
+
+/* Custom scrollbar styling */
+.monaco-editor-wrapper .monaco-editor .scrollbar .slider {
+  border-radius: 4px;
+}
+
+.monaco-editor-wrapper .monaco-editor .scrollbar.vertical .slider {
+  width: 6px !important;
+}
+
+.monaco-editor-wrapper .monaco-editor .scrollbar.horizontal .slider {
+  height: 6px !important;
+}
